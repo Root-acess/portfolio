@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.project-button:hover {
+    background-color: #555; /* Change the background color on hover */
+}
+
+    </style>
+        <header>
+            <h1>Root-acess</h1>
+            <h3>Cyber_boy</h3>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+            <button id="toggleDarkMode"> Dark Mode</button>
+        </header>
+    
+        <section id="home">
+            <!-- ... (previous code) -->
+        </section>
+    
+        <section id="about">
+            <!-- ... (previous code) -->
+        </section>
+    
+        <section id="projects">
+            <h2>Welcome</h2>
+            <div class="project-card">
+                <h3>About-Me</h3>
+                <p>Hey there! 👋 I'm Root-acess, a passionate cybersecurity enthusiast and ethical hacker. I thrive on exploring the ever-evolving world of security, always on the lookout for innovative ways to protect and defend digital landscapes.
+
+                </p>
+                <button class="project-button">Learn More</button>
+            </div>
+        </section>
+    
+        <footer>
+            <p>&copy; 2023 Your Root-acess. All rights reserved.</p>
+        </footer>
+    
+        <script>  
+        // Get the button and sections
+    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+    const sections = document.querySelectorAll('section');
+    
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        sections.forEach(section => section.classList.toggle('dark-mode'));
+    }
+    
+    // Event listener for the dark mode button
+    toggleDarkModeButton.addEventListener('click', toggleDarkMode);
+    
+        </script>
+
+</body>
+</html>
