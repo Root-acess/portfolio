@@ -3,132 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Portfolio</title>
+
     <style>
- body {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 header {
-    background-color: #333;
+    background-color: #005dce;
     color: white;
-    padding: 1em;
-    text-align: center;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.profile-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.header-content {
+    margin-left: 20px;
 }
 
-a {
-    text-decoration: none;
+.buttons {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#hireMeButton,
+#toggleDarkMode {
+    background-color: #3498db;
     color: white;
-    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
-section {
-    padding: 20px;
+#hireMeButton:hover,
+#toggleDarkMode:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+#toggleDarkMode {
+    display: flex;
+    align-items: center;
 }
 
-
-.dark-mode {
-    background-color: #111;
-    color: white;
+#modeIcon {
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
+.dark-mode #modeIcon {
+    transform: rotate(180deg);
+}
+
+.about,
+.projects {
+    padding: 4em 0;
+}
 
 .project-card {
-    border: 1px solid #ccc;
-    padding: 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 20px;
 }
 
-.project-button {
-    background-color: #333;
+footer {
+    background-color:#005dce;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    text-align: center;
+    padding: 1em 0;
 }
 
-.project-button:hover {
-    background-color: #555; /* Change the background color on hover */
+/* Apply flexbox to align items in the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
     </style>
-        <header>
-            <h1>Root-acess</h1>
-            <h3>Cyber_boy</h3>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
-            <button id="toggleDarkMode"> Dark Mode</button>
-        </header>
-    
-        <section id="home">
-            <!-- ... (previous code) -->
-        </section>
-    
-        <section id="about">
-            <!-- ... (previous code) -->
-        </section>
-    
-        <section id="projects">
-            <h2>Welcome</h2>
-            <div class="project-card">
-                <h3>About-Me</h3>
-                <p>Hey there! 👋 I'm Root-acess, a passionate cybersecurity enthusiast and ethical hacker. I thrive on exploring the ever-evolving world of security, always on the lookout for innovative ways to protect and defend digital landscapes.
-
-                </p>
-                <button class="project-button">Learn More</button>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-image">
+                <img src="root-acess-high-resolution-logo.png" alt="Your Name">
             </div>
-        </section>
-    
-        <footer>
-            <p>&copy; 2023 Your Root-acess. All rights reserved.</p>
-        </footer>
-    
-        <script>  
-        // Get the button and sections
-    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-    const sections = document.querySelectorAll('section');
-    
-    // Function to toggle dark mode
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-        sections.forEach(section => section.classList.toggle('dark-mode'));
-    }
-    
-    // Event listener for the dark mode button
-    toggleDarkModeButton.addEventListener('click', toggleDarkMode);
-    
-        </script>
+            <div class="header-content">
+                <h1>Hiralal Singh</h1>
+                <h2>Ehical Hacker</h2>
+            </div>
+            <div class="buttons">
+                <button id="hireMeButton">Hire Me</button>
+                <button id="toggleDarkMode">
+                    <span id="modeIcon" class="light-mode-icon">🌞</span>
+                    Dark Mode
+                </button>
+            </div>
+        </div>
+    </header>
 
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Welcome to my world of ethical hacking and cybersecurity. I'm Hiralal Singh, a passionate and dedicated ethical hacker committed to securing the digital realm and ensuring the integrity of online spaces.</p>
+
+            <p>With a background in cybersecurity and a wealth of experience in ethical hacking, I bring a unique set of skills to the table. My mission is to leverage my technical expertise to identify and address vulnerabilities, fortifying digital infrastructures against potential threats.</p>
+    
+            <p>My journey in ethical hacking began with a fascination for understanding the intricate dance between hackers and security systems. Over the years, I have honed my skills in penetration testing, vulnerability assessments, and security auditing, staying ahead of the ever-evolving landscape of cyber threats.</p>
+    
+            <p>As an ethical hacker, my approach is rooted in the principles of integrity and responsibility. I believe in using my knowledge to contribute positively to the cybersecurity community, collaborating with organizations to build robust defense mechanisms and fostering a safer online environment for everyone.</p>
+    
+            <p>Whether it's dissecting complex security challenges or staying vigilant against emerging threats, I thrive on the continuous learning inherent in the world of ethical hacking. I am dedicated to staying at the forefront of technology to better serve and protect in an ever-connected digital world.</p>
+    
+            <p>Let's embark on a journey together to enhance the security posture of your digital assets. Feel free to explore my projects and get in touch if you're looking for a cybersecurity partner dedicated to ethical and effective solutions.</p>
+       
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <!-- Add your project cards here -->
+            <div class="project-card">
+                <img src="project1-image.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1 goes here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2-image.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2 goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Root-acess . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+   
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+        const sections = document.querySelectorAll('section');
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const isDarkMode = body.style.backgroundColor === 'black';
+
+            if (isDarkMode) {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+
+            sections.forEach(section => {
+                const sectionStyle = section.style;
+                const sectionIsDarkMode = sectionStyle.backgroundColor === 'black';
+
+                if (sectionIsDarkMode) {
+                    sectionStyle.backgroundColor = 'white';
+                    sectionStyle.color = 'black';
+                } else {
+                    sectionStyle.backgroundColor = 'black';
+                    sectionStyle.color = 'white';
+                }
+            });
+
+            const modeIcon = document.getElementById('modeIcon');
+            modeIcon.innerHTML = isDarkMode ? '🌞' : '🌚';
+        }
+
+        toggleDarkModeButton.addEventListener('click', toggleDarkMode);
+    });
+
+    </script>
 </body>
 </html>
