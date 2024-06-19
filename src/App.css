@@ -78,9 +78,9 @@ nav a:hover {
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    border-color: #fff;
     margin-top: -17%;
     margin-left: 50px;
+    border: none;
 }
 
 .profile-icon {
@@ -102,14 +102,16 @@ nav a:hover {
     color: #ffffff;
     opacity: 0.8;
 }
+
 .text h3 {
   margin-left: -99px;
   opacity: 0.5;
 }
 
-.btn{
+.btn {
   margin-left: 52%;
 }
+
 .area {
     background: #000000;
     width: 100%;
@@ -231,14 +233,16 @@ nav a:hover {
     z-index: 10;
     position: relative;
 }
-.section p{
+
+.section p {
     margin-top: 20px;
 }
-.section-contact{
 
-  display: flex;
-  justify-content: center;
+.section-contact {
+    display: flex;
+    justify-content: center;
 }
+
 #about {
     background: #1a1a1a;
 }
@@ -334,4 +338,71 @@ nav a:hover {
 .skill:hover {
     background: #8f94fb;
 }
-/***********************************************************/
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .profile-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-container h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        margin-left: 0;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .context h1 {
+        font-size: 36px;
+    }
+
+    .profile-container h1 {
+        font-size: 24px;
+    }
+
+    .skills {
+        gap: 5px;
+    }
+
+    .skill {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .profile-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .context h1 {
+        font-size: 24px;
+    }
+}
